@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms" 
+             xmlns:local="clr-namespace:XueQiu"
+             x:Class="XueQiu.MainPage">
+
+    <StackLayout>
+        <CarouselView x:Name="mainContent" HorizontalScrollBarVisibility="Never" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+        </CarouselView>
+        <Grid HeightRequest="50" Margin="0,0,0,10" VerticalOptions="EndAndExpand"> 
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions> 
+            <StackLayout  Grid.Column="0">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="0"/>
+                </StackLayout.GestureRecognizers>
+                <lottie:AnimationView  HeightRequest="30"   Animation="lottie/main/home.json"    AnimationSource="AssetOrBundle"    AutoPlay="True"
+    RepeatCount="3"
+    RepeatMode="Restart"
+    VerticalOptions="FillAndExpand"
+    HorizontalOptions="FillAndExpand" />
+                <Label Text="雪球" HeightRequest="20"  TextColor="#368EFF" HorizontalOptions="Center" />
+            </StackLayout>
+            <StackLayout  Grid.Column="1">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="1"/>
+                </StackLayout.GestureRecognizers>
+                <lottie:AnimationView    HeightRequest="30" 
+     
+    Animation="lottie/main/portfolio.json"
+    AnimationSource="AssetOrBundle"
+    AutoPlay="True"
+    RepeatCount="3"
+    RepeatMode="Restart"
+    VerticalOptions="FillAndExpand"
+    HorizontalOptions="FillAndExpand" />
+
+                <Label Text="行情"  HeightRequest="20" TextColor="#368EFF" HorizontalOptions="Center"  />
+
+            </StackLayout>
+
+            <StackLayout  Grid.Column="2">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="2"/>
+                </StackLayout.GestureRecognizers>
+                <lottie:AnimationView   HeightRequest="30" 
+    
+    Animation="lottie/main/trade.json"
+    AnimationSource="AssetOrBundle"
+    AutoPlay="True"
+    RepeatCount="3"
+    RepeatMode="Restart"
+    VerticalOptions="FillAndExpand"
+    HorizontalOptions="FillAndExpand" />
+
+                <Label Text="交易"  HeightRequest="20"  TextColor="#368EFF" HorizontalOptions="Center"   />
+            </StackLayout>
+
+
+
+            <StackLayout  Grid.Column="3">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="3"/>
+                </StackLayout.GestureRecognizers>
+                <lottie:AnimationView   HeightRequest="30" 
+ 
+    Animation="lottie/main/my.json"
+    AnimationSource="AssetOrBundle"
+    AutoPlay="True"
+    RepeatCount="3"
+    RepeatMode="Restart"
+    VerticalOptions="FillAndExpand"
+    HorizontalOptions="FillAndExpand" />
+                <Label Text="我的"  HeightRequest="20" TextColor="#368EFF" HorizontalOptions="Center"   />
+            </StackLayout>
+
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
