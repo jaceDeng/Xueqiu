@@ -22,7 +22,7 @@ namespace XueQiu
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-
+mainContent.Position=1;
         }
     }
 }
